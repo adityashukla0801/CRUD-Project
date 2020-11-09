@@ -127,22 +127,17 @@ function Example() {
   }, []);
 
   return (
-    <div>
-      <>
-        <div className='container text-center'>
-          <h1 className='border-bottom border-danger my-5 p-2'>
-            Employee Management System
-          </h1>
-          <img
-            src='employes.jpg'
-            width='100%'
-            height='100%'
-            className='img-fluid'
-          />
-
-          <Button className='m-3 ' variant='primary' onClick={handleShow}>
+    <div className=''>
+      <h1 className='border-bottom border-danger text-center p-2 bg-main'>Employee Management System</h1>
+        <div className='overlay text-center d-flex align-items-center justify-content-center' style={{height:'80vh'}}>
+          <div >
+          <h1 className='display-3 my-3'>Add employees with ease</h1>
+          <h4>Tracking employee data and records has been easier.GET START</h4>
+          <button className='my-5 py-2 px-4 bg-main' variant='primary' onClick={handleShow}>
             Add Employee
-          </Button>
+          </button>
+          </div>
+          
 
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -250,7 +245,7 @@ function Example() {
             </Modal.Footer>
           </Modal>
         </div>
-      </>
+      
       <Ui empData={data} delete={deleteEmployee} edit={editEmployee} />
     </div>
   );
